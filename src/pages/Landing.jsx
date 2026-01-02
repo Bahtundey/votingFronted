@@ -5,7 +5,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import votes from "../assets/votes.avif";
 import realtime from "../assets/realtime.svg";
-import creates from "../assets/creates.JPG";
+import creates from "../assets/creates.jpg";
 import voting from "../assets/voting.jpg";
 import "../styles/landing.css";
 
