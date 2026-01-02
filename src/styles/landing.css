@@ -1,0 +1,127 @@
+
+body {
+    font-family: "Inter", "Segoe UI", sans-serif;
+    background: linear-gradient(135deg,  #0d6efd,
+    #6610f2,
+    #198754,
+    #0dcaf0);
+  }
+  
+  section {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  
+  .hero-gradient {
+    background: linear-gradient(135deg,  #0d6efd,
+    #6610f2,
+    #198754,
+    #0dcaf0);
+    color: white;
+    /* background-image: url('assets/images/log.png');
+    background-size: cover;
+    background-repeat: no-repeat; */
+   
+  }
+  
+  .hero-gradient h1 span {
+    color: #ffd43b;
+  }
+  
+  .hero-gradient p {
+    max-width: 700px;
+    margin: auto;
+  }
+  
+  .hero-image {
+    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.25));
+    animation: float 5s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-12px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+ 
+  .hero-accordion .accordion-button {
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    backdrop-filter: blur(10px);
+    border: none;
+  }
+  
+  .hero-accordion .accordion-button:not(.collapsed) {
+    background: rgba(255, 255, 255, 0.25);
+    color: #fff;
+  }
+  
+  .hero-accordion .accordion-body {
+    background: rgba(255, 255, 255, 0.1);
+    color: #f1f1f1;
+    border-radius: 0 0 10px 10px;
+  }
+  
+  
+  .stats-box h2 {
+    font-size: 3rem;
+  }
+  
+  .stats-box {
+    transition: transform 0.3s ease;
+  }
+  
+  .stats-box:hover {
+    transform: translateY(-8px);
+  }
+  
+  
+  .feature-card {
+    background: white;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-10px) scale(1.02);
+  }
+  
+  
+  .accordion-button {
+    font-weight: 600;
+  }
+  
+  .accordion-item {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  }
+  
+  
+  .cta-section {
+    background: linear-gradient(135deg, #212529, #000);
+  }
+  
+  .cta-section .btn {
+    padding: 14px 40px;
+    font-size: 1.1rem;
+  }
+  .gg{
+    background: linear-gradient(
+      -45deg,
+      #0d6efd,
+      #6610f2,
+      #198754,
+      #0dcaf0
+    );
+  }

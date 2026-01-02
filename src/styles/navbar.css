@@ -1,0 +1,52 @@
+.votex-navbar {
+    background: linear-gradient(
+      135deg,
+      rgba(13, 110, 253, 0.85),
+      rgba(25, 135, 84, 0.85)
+    );
+    backdrop-filter: blur(10px);
+    padding: 0.75rem 0;
+  }
+  
+  
+  .votex-logo {
+    color: #fff !important;
+    font-size: 1.4rem;
+    letter-spacing: 0.5px;
+  }
+  
+  
+  .votex-navbar .nav-link {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  
+  .votex-navbar .nav-link:hover {
+    color: #fff !important;
+    transform: translateY(-1px);
+  }
+  
+  
+  .navbar-toggler {
+    border: none;
+  }
+  
+  .navbar-toggler-icon {
+    filter: invert(1);
+  }
+  
+  
+  @media (max-width: 991px) {
+    .navbar-collapse {
+      background: rgba(13, 110, 253, 0.95);
+      padding: 1rem;
+      border-radius: 12px;
+      margin-top: 0.75rem;
+    }
+  
+    .nav-link {
+      padding: 0.6rem 0;
+    }
+  }
+  

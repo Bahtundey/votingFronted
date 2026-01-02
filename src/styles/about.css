@@ -1,0 +1,129 @@
+
+.about-page {
+    min-height: 100vh;
+    background: linear-gradient(
+      120deg,
+      #0d6efd,
+      #6610f2,
+      #198754,
+      #0dcaf0
+    );
+    background-size: 400% 400%;
+    animation: gradientMove 10s ease infinite;
+    padding-top: 2rem;
+  }
+  
+  
+  @keyframes gradientMove {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  
+ 
+.feature-card {
+    border-radius: 18px;
+    border: none;
+    position: relative;
+
+  
+    
+    background: linear-gradient(
+      145deg,
+      #0d6efd,
+      #6610f2,
+      #198754,
+      #0dcaf0
+    );
+  
+    box-shadow:
+      0 10px 25px rgba(0, 0, 0, 0.15),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+  
+    backdrop-filter: blur(6px);
+  
+    transition:
+      transform 0.4s ease,
+      box-shadow 0.4s ease,
+      background 0.4s ease;
+  }
+  
+ 
+  .feature-card:hover {
+    transform: translateY(-12px) scale(1.02);
+  
+    background: linear-gradient(
+      145deg,
+      #2f86c4,
+      #eef3ff
+    );
+  
+    box-shadow:
+      0 30px 60px rgba(13, 110, 253, 0.35),
+      0 0 0 2px rgba(13, 110, 253, 0.15);
+  }
+  
+  
+ 
+.feature-icon,
+.feature-icon-sm {
+  background: linear-gradient(
+    135deg,
+    #0d6efd,
+    #6610f2
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+  
+  
+  .about-page h2,
+  .about-page h3,
+  .about-page h5,
+  .about-page h6 {
+    color: #ffffff;
+  }
+  
+  .about-page .lead,
+  .about-page .text-muted,
+  .about-page p {
+    color: #e5e7eb !important;
+  }
+  
+ 
+  .carousel {
+    border-radius: 18px;
+    overflow: hidden;
+    background: #ffffff;
+  }
+  
+  .carousel img {
+    height: 420px;
+    object-fit: cover;
+  }
+  
+ 
+  @media (max-width: 768px) {
+    .carousel img {
+      height: 260px;
+    }
+  }
+  
+.feature-icon,
+.feature-icon-sm {
+  background: linear-gradient(
+    135deg,
+    #0d6efd,
+    #6610f2
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

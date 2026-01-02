@@ -1,0 +1,24 @@
+:root {
+    
+    --primary: #0d6efd;
+    --primary-soft: rgba(13, 110, 253, 0.08);
+  
+    
+    --bg-main: #f6f9ff;
+    --bg-gradient: linear-gradient(
+      135deg,
+      #f6f9ff 0%,
+      #eef3ff 50%,
+      #f9fbff 100%
+    );
+  
+    
+    --card-bg: rgb(59, 43, 43);
+    --card-radius: 14px;
+    --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  
+    
+    --text-main: #212529;
+    --text-muted: #6c757d;
+  }
+  
