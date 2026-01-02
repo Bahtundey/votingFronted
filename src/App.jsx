@@ -18,7 +18,7 @@ import Privacy from "./pages/Privacy";
 import Contact from "./pages/Contact";
 
 
-import UserDashboard from "./pages/UserDashboard";
+import UserDashboard from "./pages/userDashboard";
 import Profile from "./pages/Profile";
 import MyVotes from "./pages/MyVotes";
 import UserSettings from "./pages/UserSettings";
