@@ -4,10 +4,9 @@ import * as Yup from "yup";
 import API from "../services/api";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { loginSuccess } from "../store/authSlice";
+import { loginSuccess, setUser } from "../store/authSlice";
 import "../styles/login.css";
 import anime from "../assets/anime.webp";
-
 
 const LoginSchema = Yup.object().shape({
   email: Yup.string().email("Invalid email").required("Email is required"),
@@ -22,12 +21,9 @@ export default function Login() {
     <div className="login-bg">
       <div className="container">
         <div className="row justify-content-center align-items-center min-vh-100">
-
-          
           <div className="col-lg-10">
             <div className="row align-items-center">
 
-              
               <div className="col-md-6 d-none d-md-flex justify-content-center">
                 <img
                   src={anime}
@@ -36,30 +32,35 @@ export default function Login() {
                 />
               </div>
 
-              
               <div className="col-md-6">
-                <h2 className="text-center mb-4 text-white">Welcome Back</h2>
+                <h2 className="text-center mb-4 text-white">
+                  Welcome Back
+                </h2>
 
                 <Formik
                   initialValues={{ email: "", password: "" }}
                   validationSchema={LoginSchema}
                   onSubmit={async (values, { setSubmitting }) => {
                     try {
-                      const { data } = await API.post("/auth/login", values);
-
-                      dispatch(
-                        loginSuccess({
-                          token: data.token,
-                          user: data.user,
-                        })
+                      const { data } = await API.post(
+                        "/auth/login",
+                        values
                       );
 
+                      dispatch(loginSuccess({ token: data.token }));
+                      dispatch(setUser(data.user));
+
                       navigate(
-                        data.user.role === "admin" ? "/admin" : "/user",
+                        data.user.role === "admin"
+                          ? "/admin"
+                          : "/user",
                         { replace: true }
                       );
                     } catch (err) {
-                      alert(err.response?.data?.error || "Login failed");
+                      alert(
+                        err.response?.data?.error ||
+                          "Login failed"
+                      );
                     } finally {
                       setSubmitting(false);
                     }
@@ -67,16 +68,17 @@ export default function Login() {
                 >
                   {({ isSubmitting }) => (
                     <Form className="card p-4 shadow-lg border-0">
-                      {/* EMAIL */}
                       <label>Email</label>
-                      <Field name="email" className="form-control" />
+                      <Field
+                        name="email"
+                        className="form-control"
+                      />
                       <ErrorMessage
                         name="email"
                         component="div"
                         className="text-danger"
                       />
 
-                     
                       <label className="mt-3">Password</label>
                       <Field
                         type="password"
@@ -89,13 +91,14 @@ export default function Login() {
                         className="text-danger"
                       />
 
-                     
                       <button
                         type="submit"
                         className="btn btn-primary w-100 mt-4"
                         disabled={isSubmitting}
                       >
-                        {isSubmitting ? "Logging in..." : "Login"}
+                        {isSubmitting
+                          ? "Logging in..."
+                          : "Login"}
                       </button>
                     </Form>
                   )}
@@ -104,7 +107,6 @@ export default function Login() {
 
             </div>
           </div>
-
         </div>
       </div>
     </div>
