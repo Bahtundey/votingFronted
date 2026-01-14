@@ -19,7 +19,7 @@ export default function About() {
         </p>
       </div>
 
-      {/* ================= INTRO ================= */}
+      
       <div className="row justify-content-center mb-5">
         <div className="col-md-10 text-center">
           <p className="lead">

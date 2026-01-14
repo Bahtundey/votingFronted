@@ -38,7 +38,7 @@ export default function PollDetails() {
     if (id) {
       socket.emit("joinPoll", { pollId: id });
     } else {
-      console.warn("⚠️ Missing pollId during joinPoll");
+      console.warn(" Missing pollId during joinPoll");
     }
 
     
